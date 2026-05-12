@@ -30,7 +30,7 @@ export interface CreateQuestionPayload {
   rubric: string;
 }
 
-const BASE = "";
+const BASE = import.meta.env.VITE_API_URL || "";
 
 async function handleResponse<T>(res: Response): Promise<T> {
   if (!res.ok) {
